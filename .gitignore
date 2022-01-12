@@ -1,10 +1,10 @@
 .pypirc_test
-.pypirc_real
+.pypirc
 pyproject.toml
 setup.cfg
 
 Docker_pypitest/
-Docker_pypireal/
+Docker_pypi/
 Dockerhub/
 Dockerhub_notebook/
 data/

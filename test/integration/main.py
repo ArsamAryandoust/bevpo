@@ -52,7 +52,7 @@ for city in city_list:
         map_movement_id_to_centroid_lat,
         map_movement_id_to_centroid_long
     ) = prep_data.calc_centroids(
-       map_movement_id_to_latitude_coordinates,
+        map_movement_id_to_latitude_coordinates,
         map_movement_id_to_longitude_coordinates
     )
 

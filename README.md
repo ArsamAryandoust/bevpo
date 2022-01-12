@@ -1,11 +1,12 @@
-Bevpo is a city-scale car traffic and parking analysis tool. It utilizes a Hidden
-Markov Model to translate changes in travel time between different zones of a city
-throughout multiple time steps into probabilities of driving or not, as well as 
-choosing a destination if driving. Given the joint distribution from these two
-multivariate probability distributions, bevpo then samples a vehicle fleet of 
-arbitrary size. One key strength of bevpo is that it is able to model at arbitrary
-granularities in time and space, which are eventually given by the data provided
-to bevpo. 
+Bevpo stands for 'battery electric vehicle policy' and was first named this way 
+by Anthony Patt and Marc Melliger. It is a package that provides city-scale car 
+traffic and parking analyses. It utilizes a Hidden Markov Model to translate changes 
+in travel time between different zones of a city throughout multiple time steps 
+into probabilities of driving or not, as well as choosing a destination if driving. 
+Given the joint distribution from these two multivariate probability distributions, 
+bevpo then samples a vehicle fleet of arbitrary size. One key strength of bevpo 
+is that it is able to model at arbitrary granularities in time and space, which 
+are eventually given by the data provided to bevpo. 
 
 
 ### Installation:
@@ -65,7 +66,7 @@ of all parameters, attributes, methods and generated results.
   
   <tr>
     <td>
-      <b>od_stddev_travel_time_list (=None default)</b>: <br />  list of 
+      <b>od_stddev_travel_time_list (=None)</b>: <br />  list of 
       n_data_t x 3 matrices
     </td>
     <td>
@@ -77,7 +78,7 @@ of all parameters, attributes, methods and generated results.
   
   <tr>
     <td>
-      <b>od_distances (=None default)</b>: <br />  n_zones x n_zones
+      <b>od_distances (=None)</b>: <br />  n_zones x n_zones
     </td>
     <td>
       Symmetric origin destination matrix with same zone IDs as columns and 
@@ -87,7 +88,7 @@ of all parameters, attributes, methods and generated results.
 
   <tr>
     <td>
-      <b>charging_profile (=None default)</b>: <br />  list of floats > 0
+      <b>charging_profile (=None)</b>: <br />  list of floats > 0
     </td>
     <td>
       A charging profile for electric vehicles with one floating point entry per
@@ -98,7 +99,7 @@ of all parameters, attributes, methods and generated results.
 
   <tr>
     <td>
-      <b>e_drive (=2 default)</b>: <br /> float > 0
+      <b>e_drive (=2)</b>: <br /> float > 0
     </td>
     <td>
       Exponential parameter describing the (exponential) functional relationship
@@ -109,7 +110,7 @@ of all parameters, attributes, methods and generated results.
   
   <tr>
     <td>
-      <b>e_dest (=2 default)</b>: <br /> float > 0 
+      <b>e_dest (=2)</b>: <br /> float > 0 
     </td>
     <td>
       Exponential parameter describing the (expoential) functional relationship
@@ -122,7 +123,7 @@ of all parameters, attributes, methods and generated results.
   
   <tr>
     <td>
-      <b>p_min (=0.1 default)</b>: <br /> float in [0, p_max)
+      <b>p_min (=0.1)</b>: <br /> float in [0, p_max)
     </td>
     <td>
       The lower bound of probability distribution for p_drive. 
@@ -131,7 +132,7 @@ of all parameters, attributes, methods and generated results.
   
   <tr>
     <td>
-      <b>p_max (=0.9 default)</b>: <br /> float in (p_min, 1] 
+      <b>p_max (=0.9)</b>: <br /> float in (p_min, 1] 
     </td>
     <td>
       The upper bound of probability distribution for p_drive.
@@ -140,7 +141,7 @@ of all parameters, attributes, methods and generated results.
   
   <tr>
     <td>
-      <b>cars_per_zone (=100 default)</b>: <br /> int > 0 
+      <b>cars_per_zone (=100)</b>: <br /> int > 0 
     </td>
     <td>
       The number of cars to be sampled for each city zone during traffic 
@@ -432,6 +433,7 @@ of all parameters, attributes, methods and generated results.
 
 
 ### Examples:
+
 Simulating traffic for exemplar Uber Movement travel time data, using only the 
 minimum required information to pass to model.
 ```
